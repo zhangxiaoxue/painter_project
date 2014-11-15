@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Reset*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,li{margin:0; padding:0; list-style:none;}
+ul{margin:0; padding:0}
+.lr{float:right;}
+.ll{float:left;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+body{background:url(../images/bodyBg.jpg) repeat; text-align:center;}
+.container{width:1000px; position:relative; text-align:left; margin:0 auto;}
+
+#header{ background:url(../images/sketchyBg.gif) center top no-repeat; height:310px;}
+#header #logo{ position:relative; left:15px; top:43px;}
+#header .lr{ display:block; text-align:center; font-size:18px; font-family:"微软雅黑"; color:#fff; background:url(../images/saveBtn.gif) no-repeat; display:block; height:39px; line-height:39px; width:119px; position:relative; top:65px; right:10px; margin-right:10px;}
+#header .lr:hover{text-decoration:none;}
+
+#canvasDiv{ height:560px;margin-top:-160px;}
+
+#choice{ position:relative; margin-top:20px;}
+#choice .title{ padding-left:10px; height:39px;}
+#choice #tab li{background:#fff url(../images/normalTab.gif) 0 0 no-repeat; width:107px; height:43px; float:left; margin-right:10px; line-height:45px; text-align:center; position:relative;}
+#choice #tab li.active{ background-position:0 -43px; z-index:2; height:47px;}
+#choice #tab li a{font-size:18px; font-family:"微软雅黑"; font-weight:bold; color:#999;}
+#choice #tab li.active a{ color:#000;}
+#choice .content{background:url(../images/choiceBg.png) no-repeat; height:192px;position:relative; padding:0 14px;}
+#choice .arrow{ background:url(../images/arrow.gif) no-repeat; width:36px; height:40px; position:relative; top:65px;}
+#choice .arrow a{display:block; width:36px; height:40px;}
+#choice #leftArrow{ background-position:0 0;}
+#choice #rightArrow{ background-position:-36px 0;}
+#choice .showArea{ width:870px; height:120px; position:relative; top:25px; margin:0 15px; overflow:hidden;}
+#choice .picList{width:10000px; height:120px; position:relative;}
+#choice .picList li{width:145px; float:left; text-align:center; }
+#choice .picList li img{ cursor:pointer;}
+#choice p.picList{ color:#333; font-size:12px;}
+
+#footer{font-family:Tahoma, Geneva, sans-serif; color:#999; font-size:14px; margin-top:20px; text-align:center; height:50px;}
+
+#saveImg{ border:1px solid 1px;}
+#saveHint{ font-size:16px; font-family:"微软雅黑";color:#fff; margin-bottom:10px;}
