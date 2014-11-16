@@ -120,27 +120,27 @@ function prepareCanvas()
 	canvasBackgroundImage.onload = function() { 
 		resourceLoaded(); 
 	}
-	canvasBackgroundImage.src='../images/canvas.gif';
+	canvasBackgroundImage.src='images/canvas.gif';
 	
 	crayonTextureImage.onload = function() { 
 		resourceLoaded(); 
 	}
-	crayonTextureImage.src = "../images/crayonTexture.png";
+	crayonTextureImage.src = "images/crayonTexture.png";
 	
 	outlineImage.onload = function() { 
 		resourceLoaded(); 
 	}
-	outlineImage.src='../images/machine/3.png';
+	outlineImage.src='images/machine/3.png';
 	
 	colorSelectedImage.onload = function() { 
 		resourceLoaded(); 
 	}
-	colorSelectedImage.src='../images/colorSelected.png';
+	colorSelectedImage.src='images/colorSelected.png';
 	
 	toolSelectedImage.onload = function() { 
 		resourceLoaded(); 
 	}
-	toolSelectedImage.src='../images/toolSelected.gif';
+	toolSelectedImage.src='images/toolSelected.gif';
 	
 	//添加画布背景
 	context.drawImage(canvasBackgroundImage,0,0,canvasWidth,canvasHeight);
