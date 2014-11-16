@@ -119,27 +119,27 @@ function prepareCanvas()
 	//加载图片
 	canvasBackgroundImage.onload = function() { 
 		resourceLoaded(); 
-	}
+	};
 	canvasBackgroundImage.src='images/canvas.gif';
 	
 	crayonTextureImage.onload = function() { 
 		resourceLoaded(); 
-	}
+	};
 	crayonTextureImage.src = "images/crayonTexture.png";
 	
 	outlineImage.onload = function() { 
 		resourceLoaded(); 
-	}
+	};
 	outlineImage.src='images/machine/3.png';
 	
 	colorSelectedImage.onload = function() { 
 		resourceLoaded(); 
-	}
+	};
 	colorSelectedImage.src='images/colorSelected.png';
 	
 	toolSelectedImage.onload = function() { 
 		resourceLoaded(); 
-	}
+	};
 	toolSelectedImage.src='images/toolSelected.gif';
 	
 	//添加画布背景
@@ -245,7 +245,7 @@ function prepareCanvas()
 	for(var i=0;i<n;i++){
 		var oDragMe=oDragMeArray[i];
 		oDragMe.addEventListener('dragstart', function(e) {
-		　　	e.dataTransfer.setData('text/plain', e.target.getAttribute('imgSrc'));
+            e.dataTransfer.setData('text/plain', e.target.getAttribute('imgSrc'));
 		},false);
 	}	
 	
@@ -253,11 +253,11 @@ function prepareCanvas()
 	oDropBox.addEventListener('dragover', function(e) {
 		e.stopPropagation();
 		e.preventDefault();
-	},false)
+	},false);
 	
 	oDropBox.addEventListener('drop', function(e) {
 		e.stopPropagation();
-	　　	e.preventDefault();
+        e.preventDefault();
 		
 		var mouseX = e.pageX - this.offsetLeft;
 		var mouseY = e.pageY - this.offsetTop;
@@ -270,12 +270,14 @@ function prepareCanvas()
 		if(e.dataTransfer.getData('text/plain')){
 			outlineImage.src=e.dataTransfer.getData('text/plain');
 		}else{
-			var fileList  = e.dataTransfer.files;　　//获取拖拽文件
+            //获取拖拽文件
+			var fileList  = e.dataTransfer.files;
 			reader = new FileReader();
-			reader.onload = function(e) {
-		　　　　outlineImage.src = this.result;
-		　　}
-		　　reader.readAsDataURL(fileList[0]);　　//这里只取拖拽的第一个，实际中你可以遍历处理file列表
+			reader.onload = function(e){
+                outlineImage.src = this.result;
+            };
+            //这里只取拖拽的第一个，实际中你可以遍历处理file列表
+            reader.readAsDataURL(fileList[0]);
 		}
 		redraw();
 	},false);
